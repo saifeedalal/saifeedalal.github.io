@@ -94,28 +94,39 @@ function filterData(inputData){
   //
   inputElement = d3.select("#datetime");
   inputValue = inputElement.property("value").trim();
-  if (inputValue != "")
+  if (inputValue != ""){
+    console.log(`Filter applied for Date: ${inputValue}`);
     filteredData = filteredData.filter(ufo => ufo.datetime === inputValue.toLowerCase());
+  }
+   
 
   inputElement = d3.select("#city");
   inputValue = inputElement.property("value").trim();
-  if (inputValue != "")
+  if (inputValue != ""){
+    console.log(`Filter applied for City: ${inputValue}`);
     filteredData = filteredData.filter(ufo => ufo.city === inputValue.toLowerCase());
+  }
   
   inputElement = d3.select("#state");
   inputValue = inputElement.property("value").trim();
-  if (inputValue != "")
+  if (inputValue != ""){
+    console.log(`Filter applied for STate: ${inputValue}`);
     filteredData = filteredData.filter(ufo => ufo.state === inputValue.toLowerCase());
+  }
  
   inputElement = d3.select("#country");
   inputValue = inputElement.property("value").trim();
-  if (inputValue != "")
-     filteredData = filteredData.filter(ufo => ufo.country === inputValue.toLowerCase());
+  if (inputValue != ""){
+    console.log(`Filter applied for Country: ${inputValue}`);
+    filteredData = filteredData.filter(ufo => ufo.country === inputValue.toLowerCase());
+  }
 
   inputElement = d3.select("#shape");
   inputValue = inputElement.property("value").trim();
-  if (inputValue != "")
+  if (inputValue != ""){
+    console.log(`Filter applied for Shape: ${inputValue}`);
     filteredData = filteredData.filter(ufo => ufo.shape === inputValue.toLowerCase());
+  }
   
   console.log("Inside filterData(): End");
   return filteredData;
